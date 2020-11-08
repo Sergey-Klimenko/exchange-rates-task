@@ -14,9 +14,12 @@ export class AppService {
   }
 
   public getData(source: Source): Observable<any> {
+    let responseType = null;
     if (source.type === 'xml') {
-      return this.http.get(source.url, {responseType: 'text'});
+      responseType = 'text';
+      return this.http.get(source.url, {responseType});
     }
     return this.http.get(source.url);
   }
+
 }

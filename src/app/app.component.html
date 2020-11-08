@@ -1,3 +1,14 @@
-<h1>курс Евро по отношению к российскому рублю</h1>
+<div class="container">
+  <h1 class="header">Курс {{valuteName}} по отношению к российскому рублю</h1>
+  <div class="content">
+    <h2 class="info">1 {{valuteName}} = {{valuteCoast}} руб.</h2>
+    <div class="row">
+      <h4 class="info">Дата обновления курса {{courseDate}}</h4>
+      <button class="button" (click)="interrogateSources()">Обновить данные вручную</button>
+    </div>
+    <div class="info-message">Данные автоматически обновляются каждые {{refreshPeriod / 1000}} секунд</div>
+  </div>
+</div>
+
 
 
